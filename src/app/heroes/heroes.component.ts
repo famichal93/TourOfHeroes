@@ -29,7 +29,8 @@ export class HeroesComponent implements OnInit {
     }
 
     getHeroes(): void {
-        this.heroService.getHeroes().subscribe((h) => this.heroes = h);
+        this.heroService.getHeroes()
+            .subscribe(heroes => this.heroes = heroes);
     }
 
     log(text: string) {
@@ -37,7 +38,6 @@ export class HeroesComponent implements OnInit {
     }
 
     logService(text: string) {
-
         console.log(this.heroService.log(text));
     }
 }
