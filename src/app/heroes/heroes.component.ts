@@ -36,6 +36,7 @@ export class HeroesComponent implements OnInit {
     }
 
     logService(text: string) {
+
         console.log(this.heroService.log(text));
     }
 }
